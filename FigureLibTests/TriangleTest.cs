@@ -39,6 +39,8 @@ public class TriangleTest
     [Theory]
     [InlineData(0, 1, 2)]
     [InlineData(-9, 3, 6)]
+    [InlineData(0, -10, -1000)]
+    [InlineData(-9, 2, -18)]
     public void UnexpectedSideALength(int sideA, int sideB, int sideC)
     {
         Action act = () => new Triangle(sideA, sideB, sideC);
@@ -50,6 +52,7 @@ public class TriangleTest
     [Theory]
     [InlineData(1, 0, 2)]
     [InlineData(1, -9, 6)]
+    [InlineData(1, -9, -112)]
     public void UnexpectedSideBLength(int sideA, int sideB, int sideC)
     {
         Action act = () => new Triangle(sideA, sideB, sideC);

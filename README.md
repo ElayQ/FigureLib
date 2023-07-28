@@ -11,7 +11,7 @@
 
 ![image](https://github.com/ElayQ/FigureLib/assets/136975327/c00c6f3a-be8f-4a7e-a89c-3dd44fd9f0cb)
 
-<p>Создание таблиц:</p>
+<p>Создание таблицы продуктов:</p>
 <pre lang="sql">
 <span>CREATE TABLE Products
 (
@@ -33,7 +33,8 @@ INSERT INTO Products(ProductID, ProductName) VALUES (11, 'Garlic')
 INSERT INTO Products(ProductID, ProductName) VALUES (12, 'Cucumbers')
 INSERT INTO Products(ProductID, ProductName) VALUES (13, 'Shirt')
 INSERT INTO Products(ProductID, ProductName) VALUES (14, 'Tomato')
-
+<span>
+</pre>
 CREATE TABLE Categories
 (
 	CategoryID int primary key,
@@ -67,8 +68,7 @@ INSERT INTO Link(ID, CategoryID, ProductID) VALUES (14, 2, 14)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (15, 3, 14)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (16, 2, 4)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (17, 2, 3)
-</span>
-</pre>
+
 <p>Запрос для выбора всех пар «Имя продукта – Имя категории»:</p>
 <pre lang="sql">
 SELECT p.ProductName, c.CategoryName

@@ -13,12 +13,12 @@
 
 <p>Создание таблицы продуктов:</p>
 <pre lang="sql">
-<span>CREATE TABLE Products
+CREATE TABLE Products
 (
 	ProductID int primary key,
 	ProductName varchar(128) not null,
-)</span>
-
+)
+<br>
 INSERT INTO Products(ProductID, ProductName) VALUES (1, 'Apple')
 INSERT INTO Products(ProductID, ProductName) VALUES (2, 'Apricot')
 INSERT INTO Products(ProductID, ProductName) VALUES (3, 'Banana')

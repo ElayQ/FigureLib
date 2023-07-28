@@ -69,9 +69,10 @@ INSERT INTO Link(ID, CategoryID, ProductID) VALUES (16, 2, 4)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (17, 2, 3)
 
 <p>Запрос для выбора всех пар «Имя продукта – Имя категории»:</p>
-
+<pre sql>
 SELECT p.ProductName, c.CategoryName
 FROM Link AS l
 JOIN Products AS p ON l.ProductID = p.ProductID
 LEFT JOIN Categories AS c ON l.CategoryID = c.CategoryID
 ORDER BY p.ProductName
+</pre>

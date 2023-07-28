@@ -17,7 +17,7 @@
 (
 	ProductID int primary key,
 	ProductName varchar(128) not null,
-)</span>
+)
 
 INSERT INTO Products(ProductID, ProductName) VALUES (1, 'Apple')
 INSERT INTO Products(ProductID, ProductName) VALUES (2, 'Apricot')
@@ -34,12 +34,11 @@ INSERT INTO Products(ProductID, ProductName) VALUES (12, 'Cucumbers')
 INSERT INTO Products(ProductID, ProductName) VALUES (13, 'Shirt')
 INSERT INTO Products(ProductID, ProductName) VALUES (14, 'Tomato')
 
-<span>CREATE TABLE Categories
+CREATE TABLE Categories
 (
 	CategoryID int primary key,
 	CategoryName varchar(128) not null,
-)</span>
-
+)
 INSERT INTO Categories(CategoryID, CategoryName) VALUES (1, 'Fruits')
 INSERT INTO Categories(CategoryID, CategoryName) VALUES (2, 'Berries')
 INSERT INTO Categories(CategoryID, CategoryName) VALUES (3, 'Vegetables')
@@ -68,6 +67,7 @@ INSERT INTO Link(ID, CategoryID, ProductID) VALUES (14, 2, 14)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (15, 3, 14)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (16, 2, 4)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (17, 2, 3)
+</span>
 </pre>
 <p>Запрос для выбора всех пар «Имя продукта – Имя категории»:</p>
 <pre lang="sql">

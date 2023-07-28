@@ -8,9 +8,9 @@
 <p>В базе данных MS SQL Server есть продукты и категории. Одному продукту может соответствовать много категорий, в одной категории может быть много продуктов. Напишите SQL запрос для выбора всех пар «Имя продукта – Имя категории». Если у продукта нет категорий, то его имя все равно должно выводиться.</p>
 <p>Диаграмма связи таблиц:</p>
 
-![image](https://github.com/ElayQ/FigureLib/assets/136975327/e02ab62b-1a72-416d-98e3-1cf2fd248fcc)
+![image](https://github.com/ElayQ/FigureLib/assets/136975327/c00c6f3a-be8f-4a7e-a89c-3dd44fd9f0cb)
 
-Создание таблиц:
+<p>Создание таблиц:</p>
 CREATE TABLE Products
 (
 	ProductID int primary key,
@@ -67,11 +67,10 @@ INSERT INTO Link(ID, CategoryID, ProductID) VALUES (15, 3, 14)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (16, 2, 4)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (17, 2, 3)
 
-Запрос для выбора всех пар «Имя продукта – Имя категории»:
+<p>Запрос для выбора всех пар «Имя продукта – Имя категории»:</p>
 
 SELECT p.ProductName, c.CategoryName
 FROM Link AS l
 JOIN Products AS p ON l.ProductID = p.ProductID
 LEFT JOIN Categories AS c ON l.CategoryID = c.CategoryID
 ORDER BY p.ProductName
-

@@ -17,7 +17,7 @@
 (
 	ProductID int primary key,
 	ProductName varchar(128) not null,
-)
+)</span>
 
 INSERT INTO Products(ProductID, ProductName) VALUES (1, 'Apple')
 INSERT INTO Products(ProductID, ProductName) VALUES (2, 'Apricot')
@@ -33,7 +33,6 @@ INSERT INTO Products(ProductID, ProductName) VALUES (11, 'Garlic')
 INSERT INTO Products(ProductID, ProductName) VALUES (12, 'Cucumbers')
 INSERT INTO Products(ProductID, ProductName) VALUES (13, 'Shirt')
 INSERT INTO Products(ProductID, ProductName) VALUES (14, 'Tomato')
-<span>
 </pre>
 CREATE TABLE Categories
 (

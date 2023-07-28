@@ -34,11 +34,11 @@ INSERT INTO Products(ProductID, ProductName) VALUES (12, 'Cucumbers')
 INSERT INTO Products(ProductID, ProductName) VALUES (13, 'Shirt')
 INSERT INTO Products(ProductID, ProductName) VALUES (14, 'Tomato')
 
-CREATE TABLE Categories
+<span>CREATE TABLE Categories
 (
 	CategoryID int primary key,
 	CategoryName varchar(128) not null,
-)
+)</span>
 
 INSERT INTO Categories(CategoryID, CategoryName) VALUES (1, 'Fruits')
 INSERT INTO Categories(CategoryID, CategoryName) VALUES (2, 'Berries')

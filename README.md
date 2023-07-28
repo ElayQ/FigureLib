@@ -11,7 +11,7 @@
 
 ![image](https://github.com/ElayQ/FigureLib/assets/136975327/c00c6f3a-be8f-4a7e-a89c-3dd44fd9f0cb)
 
-<p>Создание таблицы продуктов:</p>
+<p>Создание таблиц:</p>
 <pre lang="sql">
 CREATE TABLE Products
 (
@@ -33,23 +33,24 @@ INSERT INTO Products(ProductID, ProductName) VALUES (11, 'Garlic')
 INSERT INTO Products(ProductID, ProductName) VALUES (12, 'Cucumbers')
 INSERT INTO Products(ProductID, ProductName) VALUES (13, 'Shirt')
 INSERT INTO Products(ProductID, ProductName) VALUES (14, 'Tomato')
-</pre>
+<br>
 CREATE TABLE Categories
 (
 	CategoryID int primary key,
 	CategoryName varchar(128) not null,
 )
+<br>
 INSERT INTO Categories(CategoryID, CategoryName) VALUES (1, 'Fruits')
 INSERT INTO Categories(CategoryID, CategoryName) VALUES (2, 'Berries')
 INSERT INTO Categories(CategoryID, CategoryName) VALUES (3, 'Vegetables')
-
+<br>
 CREATE TABLE Link
 (
 	ID int primary key,
 	CategoryID int foreign key references Categories(CategoryID),
 	ProductID int foreign key references Products(ProductID),
 )
-
+<br>
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (1, 1, 1)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (2, 1, 2)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (3, 1, 3)
@@ -67,7 +68,7 @@ INSERT INTO Link(ID, CategoryID, ProductID) VALUES (14, 2, 14)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (15, 3, 14)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (16, 2, 4)
 INSERT INTO Link(ID, CategoryID, ProductID) VALUES (17, 2, 3)
-
+</pre>
 <p>Запрос для выбора всех пар «Имя продукта – Имя категории»:</p>
 <pre lang="sql">
 SELECT p.ProductName, c.CategoryName
